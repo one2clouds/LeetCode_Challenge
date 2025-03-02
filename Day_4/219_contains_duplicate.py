@@ -1,16 +1,13 @@
 def contains_duplicates(nums, k):
-    L = 0 
-    window = set()
+    seen = set()
 
-    for R in range(len(nums)):
-        if R-L > k:
-            window.remove(nums[L])
-            L += 1
-
-        if nums[R] in window:
+    for i,num in enumerate(nums):
+        if num in seen:   # if number in set then return true 
             return True 
-        window.add(nums[R])
-    
+        seen.add(num) # add number 
+
+        if len(seen) > k : # if length of our set is greater than k then remove i-k i.e if i=5& k =3 , remove 5-3=2nd item from set 
+            seen.remove(nums[i-k])
     return False 
     
 
