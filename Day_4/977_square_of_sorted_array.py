@@ -1,3 +1,5 @@
+import collections 
+
 # Trival Solution 
 # Time complexity => (N) + (NlogN) = N logN
 def square_of_sorted_array(nums):
@@ -51,6 +53,19 @@ def square_of_sorted_array_2(nums):
     
     return merge(A,B)
 
+def square_of_sorted_array_3(nums):
+    l,r = 0, len(nums)-1
+    result = collections.deque()
+
+    while l <=r:
+        if abs(nums[l])>abs(nums[r]):
+            result.appendleft(nums[l]**2)
+            l += 1
+        else:
+            result.appendleft(nums[r]**2)
+            r -= 1
+
+    return list(result)
 
 
 
@@ -60,4 +75,8 @@ if __name__ == "__main__":
 
     nums = [-4,-3,-2,-1]
     print(square_of_sorted_array(nums))
+    print(square_of_sorted_array_2(nums))
+    print(square_of_sorted_array_3(nums))
+
+
 
