@@ -4,6 +4,9 @@
 # to find a solution effectively. 
 
 
+# time complexity => O(amount*len(coins))
+# space complexity => O(amount)
+
 def coin_change(coins, amount):
 
     dp = [amount + 1] (amount+1) # [amount+1] makes list of value (amount+1)
