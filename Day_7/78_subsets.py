@@ -1,8 +1,11 @@
+"""
+Time complexity = O(n. 2^n)     # for list of size n, each element has choice of including it or excluding. Resulting in 2^n subset. & for each node it requires O(n) time. So O(n.2^n)
+Space complexity = O(n. 2^n)    # 2^n subsets and each subset can be of size at most n
+"""
+
 def subsets(nums):
     subset = []
     output = []
-
-
 
     # add all elements of the list recursively at first, then append it there, then go out of each recursive loop and pop each element to get empty subset, [] at last.
     def backtracking(i):
