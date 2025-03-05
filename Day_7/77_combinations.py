@@ -1,4 +1,6 @@
 
+# Time complexity = O(C(n,k).k) # since there ate C(n,k) combinations, additional k is time spent modifying comb list
+# SPace complexity : O(C(n,k).k) # store C(n,k) combinations each of size k, because k elements stored at a time
 def combination(n, k):
     output = []
 
