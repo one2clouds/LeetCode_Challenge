@@ -1,5 +1,6 @@
 
-#time complexity : O(N) iterating from left:right+1
+#time complexity : O(N) iterating from left:right+1 
+# compute sum on every list for [0,2] and then for [2,5] and then for [0,5] for example below
 class NumArray(object):
     def __init__(self, nums):
         self.nums = nums
@@ -9,7 +10,7 @@ class NumArray(object):
     
 
 # Better Solution
-# time complexity : O(N), better approach because we need to O(N) computation only once
+# time complexity : O(N), better approach because we need to O(N) computation only once.
 class NumArray_2(object):
     def __init__(self, nums):
         self.acc_nums = [0]
@@ -19,6 +20,7 @@ class NumArray_2(object):
 
     def sumRange(self, left, right):
         return self.acc_nums[right+1] - self.acc_nums[left]
+    
 
 """
 # Input 
