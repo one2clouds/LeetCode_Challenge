@@ -1,3 +1,8 @@
+# Time COmplexity : O(N), update pointer pointing from left to right into 
+# right to left,so if there are N LL then it takes N iteration
+
+# Space Complexity = O(1) since only prev_P, current_P, and Next_P are needed 
+
 
 def reverse_linked_list(head):
 
