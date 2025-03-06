@@ -12,17 +12,29 @@ def middle_of_link_list(head):
     
     return slow
 
-
-
-
-
-
+# Definition of singly linked list
+class ListNode(object):
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
 
 
 
 
 if __name__=="__main__":
-    nums = [1,2,3, 4, 5]
-    print(middle_of_link_list(nums))
+    head = ListNode(1)
+    current = head
+    for val in [2,3,4,7]:
+        current.next = ListNode(val)
+        current = current.next
+
+    middle_node = middle_of_link_list(head)
+
+
+    result = []
+    while middle_node:
+        result.append(middle_node.val)
+        middle_node = middle_node.next
+    print(result)
 
 
